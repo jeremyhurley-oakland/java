@@ -3,18 +3,7 @@ import java.util.Scanner;
 
 public class StringFlip {
     
-    // This defines a public static method named reverse that takes a string (input) as a parameter and returns a string.
-    public static String reverse(String input) {
-        // This will create an empty StringBuilder object named reversed which will then be used by the program to build the reversed string more efficently whithin the program.
-        StringBuilder reversed = new StringBuilder();
-        // This loop will iterate through the characters of the imput string that was given by the user. the iteration will be starting with the last character and end with tthe first.
-        for (int i = input.length() - 1; i >= 0; i--) {
-            // Each charecter at postion i in the input string, it appends that charecter to the reversed StringBuilder.
-            reversed.append(input.charAt(i));
-        }
-        // The toString() method of StringBuilder is called to convert the built reversed string into a regular string and return it.
-        return reversed.toString();
-    }
+
 
     public static void main(String[] args) {
         // Creates a scanner object to read the input from the standerd imput (console).
@@ -38,5 +27,18 @@ public class StringFlip {
 
         // Close the Scanner to stop a resource leak.
         scan.close();
+    }
+
+    // This defines a public static method named reverse that takes a string (input) as a parameter and returns a string.
+    public static String reverse(String input) {
+    // This will create an empty StringBuilder object named reversed which will then be used by the program to build the reversed string more efficently whithin the program.
+    StringBuilder reversed = new StringBuilder();
+    // This loop will iterate through the characters of the imput string that was given by the user. the iteration will be starting with the last character and end with tthe first.
+    for (int i = input.length() - 1; i >= 0; i--) {
+            // Each charecter at postion i in the input string, it appends that charecter to the reversed StringBuilder.
+            reversed.append(input.charAt(i));
+        }
+        // The toString() method of StringBuilder is called to convert the built reversed string into a regular string and return it.
+        return reversed.toString();
     }
 }
